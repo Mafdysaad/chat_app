@@ -23,12 +23,19 @@ class BubbleText extends StatelessWidget {
                 topRight: Radius.circular(28),
                 bottomRight: Radius.circular(28))),
         child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            message.message,
-            textAlign: TextAlign.start,
-            style: const TextStyle(color: Colors.white, fontSize: 18),
-          ),
+          padding: const EdgeInsets.all(10),
+          child: Column(children: [
+            Text(
+              message.message,
+              textAlign: TextAlign.start,
+              style: const TextStyle(color: Colors.white, fontSize: 18),
+            ),
+            const Text(
+              textAlign: TextAlign.start,
+              '10:45 Am',
+              style: TextStyle(color: Colors.white),
+            )
+          ]),
         ),
       ),
     );
