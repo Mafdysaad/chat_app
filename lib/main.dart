@@ -1,3 +1,4 @@
+import 'package:chatapp/Simple_bloc_observes.dart';
 import 'package:chatapp/firebase_options.dart';
 import 'package:chatapp/pages/chat_page.dart';
 import 'package:chatapp/pages/cubites/Login_cubit/login_cubit.dart';
@@ -17,6 +18,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Bloc.observer = SimpleBlocObserves();
   runApp(chatApp());
 }
 
